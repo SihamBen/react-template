@@ -1,7 +1,11 @@
 # Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+This project is a react boilerplate that can serve a foundation to start a new project, it supports:
+- Pre-commit hooks with Husky
+- React Query
+- Formik
+- React router
+- TypeScript support
+- commit link and precomiit 
 ## Available Scripts
 
 In the project directory, you can run:
