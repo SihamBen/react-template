@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = 'secret';
+//import { BASE_URL } from 'config';
 export const client = axios.create({
-  baseURL: API_URL,
+  baseURL: 'https://api.github.com/',
 });
