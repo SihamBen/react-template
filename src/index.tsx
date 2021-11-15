@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import APIProvider from 'api/APIProvider';
+import {ErrorBoundary} from 'ui';
+
+import './index.css';
+import {App} from './pages/App';
 import * as Sentry from '@sentry/react';
 import {Integrations} from '@sentry/tracing';
 import {SENTRY_KEY, ENVIRONMENT} from './config';
@@ -14,14 +15,12 @@ if (ENVIRONMENT !== 'development') {
     tracesSampleRate: 1.0,
   });
 }
-
+const rootElement = document.getElementById('root');
 ReactDOM.render(
   <APIProvider>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </APIProvider>,
-  document.getElementById('root'),
+  rootElement,
 );
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

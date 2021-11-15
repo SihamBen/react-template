@@ -1,7 +1,6 @@
-import {useUsers} from 'api';
 import React from 'react';
-function App() {
-  const {data} = useUsers();
+//import {useUsers} from 'api';
+export function Home() {
   return (
     <div className="App">
       <header className="App-header">
@@ -12,5 +11,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
